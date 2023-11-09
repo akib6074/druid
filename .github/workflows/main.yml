@@ -12,7 +12,7 @@ jobs:
           java-version: '8'
           distribution: 'temurin'
       - name: Test
-        run: mvn -pl druid test -Dtest=com.alibaba.druid.bvt.pool.DruidDataSourceTest_exceptionSorter#test_event_error
+        run: mvn -pl druid test -Dtest=core/com.alibaba.druid.bvt.pool.DruidDataSourceTest_exceptionSorter#test_event_error
         
   Test_With_Nondex_Shuffling:
     runs-on: ubuntu-latest
@@ -24,4 +24,4 @@ jobs:
           java-version: '8'
           distribution: 'temurin'
       - name: Test
-        run: mvn -pl druid edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=com.alibaba.druid.bvt.pool.DruidDataSourceTest_exceptionSorter#test_event_error
+        run: mvn -pl druid edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=core/com.alibaba.druid.bvt.pool.DruidDataSourceTest_exceptionSorter#test_event_error
